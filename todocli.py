@@ -27,6 +27,12 @@ def update(postion: int, task: str = None, category: str = None):
 
 
 @app.command()
+def complete(postion: int):
+    typer.echo(f"completed {postion}")
+    show()
+
+
+@app.command()
 def show():
     tasks = [("Todo1", "Study"), ("Todo2", "Sport")]
     console.print("[bold magenta]TODOS[/bold magenta]", "💻")
